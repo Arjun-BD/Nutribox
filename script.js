@@ -17,6 +17,25 @@ const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 const dotContainer = document.querySelector('.dots');
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.add('show');
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.remove('show');
+});
+
+// Optional: Close menu when clicking a link
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('show');
+  });
+});
+
 
 const openModal = function (e) {
   e.preventDefault();

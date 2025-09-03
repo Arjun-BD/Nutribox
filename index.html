@@ -16,7 +16,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
+      <nav class="nav hideOnMobile showOnDesktopflex">
         <img
           src="img/Nutribox_full_logo.png"
           alt="Bankist logo"
@@ -43,6 +43,21 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Mobile Navbar -->
+      <nav class="nav-mobile showOnMobile hideOnDesktop">
+        <button class="hamburger" id="hamburger">&#9776;</button> <!-- Hamburger icon -->
+        <ul class="mobile-menu" id="mobileMenu">
+          <li class="close-btn-container">
+            <button class="close-menu" id="closeMenu">&times;</button>
+          </li>
+          <li><a href="#Works" class="mobile-link">How it Works</a></li>
+          <li><a href="#Plans" class="mobile-link">Plans</a></li>
+          <li><a href="#About_Us" class="mobile-link">About Us</a></li>
+          <li><a href="#Contact" class="mobile-link">Contact</a></li> 
+        </ul>
+      </nav>
+
 
       <div class="header__title">
         <h1>
@@ -80,13 +95,19 @@
              Whether you're just trying us out for a day, planning ahead for the week, or committing to a month of healthy eating, our flexible subscriptions are designed to fit your schedule. Fresh, balanced meals delivered your way, without the stress of planning or cooking.
           </p>
         </div>
-
+        <img
+            src="img/food_lz.png"
+            data-src="img/food.png"
+            alt="Plant"
+            class="features__img lazy-img hideOnDesktop showOnMobile"
+          />
         <div class="features__feature">
           <div class="features__icon">
             <svg>
               <use xlink:href="#icon-cook"></use>
             </svg>
           </div>
+          
           <h5 class="features__header">We Cook & Pack Fresh</h5>
           <p>
             Our partner kitchens craft nutritious, balanced meals daily, ensuring every dish is made with care and delivered at its freshest.
@@ -96,7 +117,7 @@
           src="img/food_lz.png"
           data-src="img/food.png"
           alt="Plant"
-          class="features__img lazy-img"
+          class="features__img lazy-img showOnDesktop hideOnMobile"
         />
 
         <img
@@ -313,7 +334,7 @@
         </h3>
       </div>
 
-      <div class="slider">
+      <div class="slider hideOnMobile showOnDesktop">
         <div class="slide slide--1">
           <div class="testimonial">
            <h5 class="testimonial__header">Healthy eating made simple!</h5>
@@ -382,7 +403,7 @@
     <footer class="footer">
   <div class="footer__container">
     <!-- Navigation -->
-    <ul class="footer__nav">
+    <ul class="footer__nav hideOnMobile showOnDesktop">
       <li class="footer__item"><a class="footer__link" href="#About_Us">About</a></li>
       <li class="footer__item"><a class="footer__link" href="#Plans">Pricing</a></li>
       <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
@@ -398,7 +419,7 @@
     </div>
 
     <!-- Legal -->
-    <ul class="footer__nav">
+    <ul class="footer__nav hideOnMobile showOnDesktop">
       <li class="footer__item"><a class="footer__link" href="#">Terms of Use</a></li>
       <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
     </ul>
